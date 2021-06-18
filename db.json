@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post one",
+      "body": "post body",
+      "publishedAt": "06-15-2021"
+    },
+    {
+      "id": "2",
+      "title": "Post Two",
+      "body": "post body",
+      "publishedAt": "06-15-2021"
+    },
+    {
+      "publishedAt": "2001-04-11",
+      "title": "wodecinghaolen",
+      "body": "lolololo",
+      "id": "GeCfbvb"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "NakanoYotsuba",
+      "email": "yotusba8629@outlook.com"
+    },
+    {
+      "name": "wodecinghaolen",
+      "email": "enengege233@gmail.com",
+      "id": "A7bHwIi"
+    }
+  ]
+}
