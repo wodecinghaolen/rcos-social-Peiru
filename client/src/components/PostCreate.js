@@ -7,6 +7,9 @@ import {
 } from 'react-admin'
 
 const PostCreate = (props) => {
+  
+  //const locale = useLocale()
+
   return (
     <Create title ='Create a Post' {...props}>
       <SimpleForm>

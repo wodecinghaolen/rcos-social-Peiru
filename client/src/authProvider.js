@@ -1,15 +1,47 @@
-import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK, AUTH_GET_PERMISSIONS } from 'react-admin';
+/*
+const authProvider = {
+    
+    // called when the user attempts to log in
+    login: ({ username }) => {
+        localStorage.setItem('username', username);
+        // accept all username/password combinations
+        return Promise.resolve();
+    },
+    // called when the user clicks on the logout button
+    logout: () => {
+        localStorage.removeItem('username');
+        return Promise.resolve();
+    },
+    // called when the API returns an error
+    checkError: ({ status }) => {
+        if (status === 401 || status === 403) {
+            localStorage.removeItem('username');
+            return Promise.reject();
+        }
+        return Promise.resolve();
+    },
+    // called when the user navigates to a new location, to check for authentication
+    checkAuth: () => {
+        return localStorage.getItem('username')
+            ? Promise.resolve()
+            : Promise.reject();
+    },
+    // called when the user navigates to a new location, to check for permissions / roles
+    getPermissions: () => Promise.resolve(),
+};
+
+//https://nakanoyotsuba.auth.us-east-2.amazoncognito.com/
+//https://eevtrn1npl.execute-api.us-east-2.amazonaws.com/auth2
+*/
 import decodeJwt from 'jwt-decode';
 
-export default (type, params) => {
-    // called when the user attempts to log in
-    if (type === AUTH_LOGIN) {
-        const { username, password } = params;
-        const request = new Request('https://mydomain.com/authenticate', {
+const authProvider = {
+    login: ({ email, password }) => {
+        const request = new Request('https://eevtrn1npl.execute-api.us-east-2.amazonaws.com/auth2', {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ email, password }),
             headers: new Headers({ 'Content-Type': 'application/json' }),
-        })
+        });
         return fetch(request)
             .then(response => {
                 if (response.status < 200 || response.status >= 300) {
@@ -20,32 +52,24 @@ export default (type, params) => {
             .then(({ token }) => {
                 const decodedToken = decodeJwt(token);
                 localStorage.setItem('token', token);
-                localStorage.setItem('role', decodedToken.role);
+                localStorage.setItem('permissions', decodedToken.permissions);
             });
-    }
-    // called when the user clicks on the logout button
-    if (type === AUTH_LOGOUT) {
+    },
+    checkError: (error) => {  },
+    checkAuth: () => {
+        return localStorage.getItem('token') ? Promise.resolve() : Promise.reject();
+    },
+    logout: () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('permissions');
         return Promise.resolve();
-    }
-    // called when the API returns an error
-    if (type === AUTH_ERROR) {
-        const { status } = params;
-        if (status === 401 || status === 403) {
-            localStorage.removeItem('token');
-            return Promise.reject();
-        }
-        return Promise.resolve();
-    }
-    // called when the user navigates to a new location
-    if (type === AUTH_CHECK) {
-        return localStorage.getItem('token')
-            ? Promise.resolve()
-            : Promise.reject();
-    }
-    if (type === AUTH_GET_PERMISSIONS) {
-        const role = localStorage.getItem('role');
+    },
+    getIdentity: () => {  },
+    getPermissions: () => {
+        const role = localStorage.getItem('permissions');
         return role ? Promise.resolve(role) : Promise.reject();
     }
-    return Promise.reject('Unknown method');
 };
+
+
+export default authProvider;

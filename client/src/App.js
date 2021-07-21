@@ -1,16 +1,27 @@
 import React from 'react'
-import { Admin, Resource, fetchUtils } from 'react-admin'
-import simpleRestProvider from 'ra-data-simple-rest'
+import { Admin, Resource } from 'react-admin'
+import restProvider from 'ra-data-simple-rest'
 import PostList from './components/PostList'
 import PostCreate from './components/PostCreate'
 import PostEdit from './components/PostEdit'
 import UserList from './components/UserList'
 import UserCreate from './components/UserCreate'
 import UserEdit from './components/UserEdit'
-import authProvider from './authProvider';
-import Dashboard from './Dashboard';
-import NotFound from './NotFound';
+import Dashboard from './Dashboard'
+import NotFound from './NotFound'
+import PostShow from './components/PostShow'
+import authProvider from './authProvider'
+import simpleRestProvider from 'ra-data-simple-rest';
+//import {AuthProvider, Login } from 'ra-cognito'
+import { fetchUtils } from 'ra-core'
 
+/*
+permissions === 'admin'
+        ? <Resource name='users' list={UserList} create={UserCreate} edit={UserEdit} />
+        : null,
+        <Resource name='posts' show={PostShow} list={PostList} create={permissions === 'admin' ? PostCreate : null} edit={PostEdit} />,
+*/
+ 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
       options.headers = new Headers({ Accept: 'application/json' });
@@ -21,15 +32,15 @@ const httpClient = (url, options = {}) => {
 }
 const dataProvider = simpleRestProvider('http://localhost:3000', httpClient);
 
-function App() {
-  return (
+
+const App = () => (
+    
     <Admin catchAll={NotFound} dashboard={Dashboard} dataProvider={dataProvider} authProvider={authProvider}>
       
-
-      <Resource name='posts' list={PostList} create={PostCreate} edit={PostEdit} />
-      <Resource name='users' list={UserList} create={UserCreate} edit={UserEdit} />
+      <Resource name='users' list={UserList} edit={UserEdit} />
+      <Resource name='posts' show={PostShow} list={PostList} create={PostCreate} edit={PostEdit} />
+      
     </Admin>
   );
-}
 
 export default App;

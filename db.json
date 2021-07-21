@@ -1,34 +1,17 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Post one",
-      "body": "post body",
-      "publishedAt": "06-15-2021"
-    },
-    {
-      "id": "2",
-      "title": "Post Two",
-      "body": "post body",
-      "publishedAt": "06-15-2021"
-    },
-    {
-      "publishedAt": "2001-04-11",
-      "title": "wodecinghaolen",
-      "body": "lolololo",
-      "id": "GeCfbvb"
+      "title": "RCOS meeting notification",
+      "body": "Hi Kevin! Here is a message from the RCOS announcements-- I am trying to make sure everyone gets the message, so they know the plan! please thumbs up this message when you see it :微笑的脸:\n------\nWe DO plan to meet this Tuseday 07/06 at 4:00pm to do some work. Please try your best to attend, and if you are unable to make it please message me or one of the leads! I know and understand this is your break, but we would like to get as much work done as possible by the weekend of 07/10 and 07/11.\nDue to this scheduling, we plan to give you guys a break during the week of 07/12! In other words, we will NOT be meeting on 07/13 or 07/16 :微笑的脸:",
+      "publishedAt": "2021-07-14",
+      "id": 1
     }
   ],
   "users": [
     {
-      "id": "1",
-      "name": "NakanoYotsuba",
-      "email": "yotusba8629@outlook.com"
-    },
-    {
-      "name": "wodecinghaolen",
-      "email": "enengege233@gmail.com",
-      "id": "A7bHwIi"
+      "name": "fgdsgdfs",
+      "email": "gsdfgdfs",
+      "id": 1
     }
   ]
 }
