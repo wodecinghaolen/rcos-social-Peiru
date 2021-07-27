@@ -1,4 +1,4 @@
-/*
+/* 
 const authProvider = {
     
     // called when the user attempts to log in
@@ -32,12 +32,20 @@ const authProvider = {
 
 //https://nakanoyotsuba.auth.us-east-2.amazoncognito.com/
 //https://eevtrn1npl.execute-api.us-east-2.amazonaws.com/auth2
+
+
 */
 import decodeJwt from 'jwt-decode';
+import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import UserPool from './UserPool';
+import jwt from 'jsonwebtoken';
+import {Auth, Login } from 'ra-cognito'
+
 
 const authProvider = {
     login: ({ email, password }) => {
-        const request = new Request('https://eevtrn1npl.execute-api.us-east-2.amazonaws.com/auth2', {
+        const request = new Request('http://localhost:8000/api/token/', {
+            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: new Headers({ 'Content-Type': 'application/json' }),

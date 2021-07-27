@@ -150,9 +150,7 @@ var __extends = undefined && undefined.__extends || function () {
   };
 }();
 
-var XRError =
-/** @class */
-function (_super) {
+var XRError = function (_super) {
   __extends(XRError, _super);
 
   function XRError() {
@@ -164,9 +162,7 @@ function (_super) {
 
 
 
-var XRNoSceneConfiguredError =
-/** @class */
-function (_super) {
+var XRNoSceneConfiguredError = function (_super) {
   __extends(XRNoSceneConfiguredError, _super);
 
   function XRNoSceneConfiguredError() {
@@ -178,9 +174,7 @@ function (_super) {
 
 
 
-var XRSceneNotFoundError =
-/** @class */
-function (_super) {
+var XRSceneNotFoundError = function (_super) {
   __extends(XRSceneNotFoundError, _super);
 
   function XRSceneNotFoundError() {
@@ -192,9 +186,7 @@ function (_super) {
 
 
 
-var XRSceneNotLoadedError =
-/** @class */
-function (_super) {
+var XRSceneNotLoadedError = function (_super) {
   __extends(XRSceneNotLoadedError, _super);
 
   function XRSceneNotLoadedError() {
@@ -206,9 +198,7 @@ function (_super) {
 
 
 
-var XRNoDomElement =
-/** @class */
-function (_super) {
+var XRNoDomElement = function (_super) {
   __extends(XRNoDomElement, _super);
 
   function XRNoDomElement() {
@@ -220,9 +210,7 @@ function (_super) {
 
 
 
-var XRSceneLoadFailure =
-/** @class */
-function (_super) {
+var XRSceneLoadFailure = function (_super) {
   __extends(XRSceneLoadFailure, _super);
 
   function XRSceneLoadFailure() {
@@ -234,9 +222,7 @@ function (_super) {
 
 
 
-var XRProviderNotConfigured =
-/** @class */
-function (_super) {
+var XRProviderNotConfigured = function (_super) {
   __extends(XRProviderNotConfigured, _super);
 
   function XRProviderNotConfigured() {
@@ -485,9 +471,7 @@ var __values = undefined && undefined.__values || function (o) {
 var SUMERIAN_SERVICE_NAME = 'sumerian';
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["ConsoleLogger"]('SumerianProvider');
 
-var SumerianProvider =
-/** @class */
-function (_super) {
+var SumerianProvider = function (_super) {
   __extends(SumerianProvider, _super);
 
   function SumerianProvider(options) {
@@ -874,9 +858,7 @@ var __assign = undefined && undefined.__assign || function () {
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["ConsoleLogger"]('AbstractXRProvider');
 
-var AbstractXRProvider =
-/** @class */
-function () {
+var AbstractXRProvider = function () {
   function AbstractXRProvider(options) {
     if (options === void 0) {
       options = {};
@@ -1117,9 +1099,7 @@ var __read = undefined && undefined.__read || function (o, n) {
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["ConsoleLogger"]('XR');
 var DEFAULT_PROVIDER_NAME = 'SumerianProvider';
 
-var XRClass =
-/** @class */
-function () {
+var XRClass = function () {
   /**
    * Initialize XR with AWS configurations
    *

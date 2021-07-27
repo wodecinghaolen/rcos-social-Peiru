@@ -1,7 +1,4 @@
 import React from 'react';
-import PostCreate from './components/PostCreate'
-import PostEdit from './components/PostEdit'
-import restProvider from 'ra-data-simple-rest'
 
 /*
 import Header from './components/Header'
@@ -63,7 +60,23 @@ import CardContent from '@material-ui/core/CardContent';
 import { Title } from 'react-admin';
 export default () => (
     <Card>
-        <Title title="Welcome to the administration" />
+        <Title title="Welcome to Social!" />
         <CardContent>Dashboard</CardContent>
+
+        <CardContent> Email the mods: liup5@rpi.edu </CardContent>             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </Card>
 );

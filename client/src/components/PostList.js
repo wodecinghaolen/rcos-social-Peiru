@@ -5,7 +5,6 @@ import {
     TextField,
     ReferenceField,
     DateField,
-    useLocale,
 } from 'react-admin'
 
 const PostList = props => (

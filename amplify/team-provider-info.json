@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rcossocial-dev-134102-authRole",
+      "UnauthRoleArn": "arn:aws:iam::585989057725:role/amplify-rcossocial-dev-134102-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::585989057725:role/amplify-rcossocial-dev-134102-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-rcossocial-dev-134102-deployment",
+      "UnauthRoleName": "amplify-rcossocial-dev-134102-unauthRole",
+      "StackName": "amplify-rcossocial-dev-134102",
+      "StackId": "arn:aws:cloudformation:us-east-2:585989057725:stack/amplify-rcossocial-dev-134102/d0b264d0-ef01-11eb-8285-02c1f8d20b10",
+      "AmplifyAppId": "d1q7cljspavdsw"
+    },
+    "categories": {
+      "auth": {
+        "rcossocial1a2daf4c": {}
+      }
+    }
+  }
+}

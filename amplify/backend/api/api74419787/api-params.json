@@ -1,0 +1,55 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "rcossocial0f5db0d4",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/items"
+        },
+        {
+            "name": "/items",
+            "lambdaFunction": "rcossocial84a9f8e5",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/items"
+        }
+    ],
+    "resourceName": "api74419787",
+    "apiName": "api74419787",
+    "functionArns": [
+        {
+            "lambdaFunction": "rcossocial0f5db0d4"
+        },
+        {
+            "lambdaFunction": "rcossocial84a9f8e5"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-rcossocial-dev-134102-authRole",
+        "unAuthRoleName": "amplify-rcossocial-dev-134102-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "rcossocial0f5db0d4",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "rcossocial84a9f8e5",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "4b3a7be0"
+}

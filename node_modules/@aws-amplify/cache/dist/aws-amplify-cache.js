@@ -157,9 +157,7 @@ var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_2__["ConsoleLogger"]
  * Customized storage based on the SessionStorage or LocalStorage with LRU implemented
  */
 
-var BrowserStorageCacheClass =
-/** @class */
-function (_super) {
+var BrowserStorageCacheClass = function (_super) {
   __extends(BrowserStorageCacheClass, _super);
   /**
    * initialize the cache
@@ -727,9 +725,7 @@ var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_2__["ConsoleLogger"]
  * @member cacheSizeLimit - the limit of cache size
  */
 
-var InMemoryCacheClass =
-/** @class */
-function (_super) {
+var InMemoryCacheClass = function (_super) {
   __extends(InMemoryCacheClass, _super);
   /**
    * initialize the cache
@@ -1145,9 +1141,7 @@ var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]
  *
  */
 
-var StorageCache =
-/** @class */
-function () {
+var StorageCache = function () {
   /**
    * Initialize the cache
    * @param config - the configuration of the cache
@@ -1304,9 +1298,7 @@ var __values = undefined && undefined.__values || function (o) {
   throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 
-var DoubleLinkedNode =
-/** @class */
-function () {
+var DoubleLinkedNode = function () {
   function DoubleLinkedNode(keyVal) {
     this.key = keyVal ? keyVal : '';
     this.prevNode = null;
@@ -1328,9 +1320,7 @@ function () {
  */
 
 
-var CacheList =
-/** @class */
-function () {
+var CacheList = function () {
   /**
    * initialization
    */
@@ -1611,9 +1601,7 @@ function _isInteger(value) {
 
 var store = {};
 
-var CacheObject =
-/** @class */
-function () {
+var CacheObject = function () {
   function CacheObject() {}
 
   CacheObject.clear = function () {
