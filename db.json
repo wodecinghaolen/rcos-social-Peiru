@@ -11,12 +11,18 @@
       "title": "Successfully implemented the login function",
       "publishedAt": "2021-07-27",
       "id": 2
+    },
+    {
+      "body": "Hi Kevin! With respect to the functions for the admin/moderator dashboard, we are thinking that it should have the following functions:\neach moderator will a groupchat with a certain number of users (TBD depending on the number of users playing a game)\nusers will have a “call for assistance” button that they can click on, and a moderator will be alerted + can teleport into the room with the user that clicked the button\nspeaking and chatting function with other moderators\na “request project lead” button that will immediately contact a project lead--> directs them to a page with project lead phone number(s) (numbers TBD)\nmoderators will have a list of tasks that the users must complete for points\nassociated with this list, there will be a certain number of points moderators can award to teams (points moderators can select: 1, 2, 3, 4, 5)\nthe system will automatically assign users tasks--> the system will message both the moderators and students the list of tasks\nThis is all we have for now, but if we think of anything else, I will message you with more details! Best of luck and let us know if you have any questions! Thank you Kevin! ",
+      "title": "Jobs",
+      "publishedAt": "",
+      "id": 3
     }
   ],
   "users": [
     {
-      "name": "fgdsgdfs",
-      "email": "gsdfgdfs",
+      "name": "Peiru Liu",
+      "email": "liup5@rpi.edu",
       "id": 1
     }
   ]

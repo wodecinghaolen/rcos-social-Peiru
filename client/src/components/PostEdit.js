@@ -3,7 +3,7 @@ import {
     Edit,
     SimpleForm,
     TextInput,
-    DateInput
+    DateInput,
 } from 'react-admin'
 
 const PostEdit = (props) => {

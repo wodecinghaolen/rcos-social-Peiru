@@ -3,17 +3,15 @@ import {
     List,
     Datagrid,
     TextField,
-    ReferenceField,
     DateField,
 } from 'react-admin'
 
-const PostList = props => (
-  <List {...props}>
+const PostList = ({permissions, ...props}) => (
+  <List 
+    bulkActionButtons={permissions.includes("admin") ? true : false} {...props}>
       <Datagrid rowClick="edit">
-          <ReferenceField source="userId" reference="users">
--               <TextField source="id" />
-+               <TextField source="name" />
-          </ReferenceField>
+-         <TextField source="id" />
++         <TextField source="name" />
           <DateField source="publishedAt" />
           <TextField source="title" />
           <TextField source="body" />
